@@ -554,6 +554,7 @@ const AccountsView: React.FC = () => {
                     <Button
                         variant="contained"
                         onClick={handleSaveAccount}
+                        disabled={formAccount.vendor === 'yahav' && !formAccount.id_number.trim()}
                         sx={{
                             borderRadius: '12px',
                             px: 4,
