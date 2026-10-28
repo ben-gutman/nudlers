@@ -184,6 +184,7 @@ export default async function handler(req, res) {
                         });
                     };
 
+                    validateCredentials(scraperCredentials, account.vendor);
                     const result = await runScraper(client, scraperOptions, scraperCredentials, progressHandler, () => false);
 
                     if (!result.success) {
